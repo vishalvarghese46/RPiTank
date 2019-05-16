@@ -5,6 +5,7 @@ can be achieved using PWMLED
 
 from gpiozero import PWMLED
 from time import sleep
+from signal import pause
 
 led = PWMLED(17)
 
@@ -17,3 +18,12 @@ while True:
     sleep(1)
     led.value = 1
     sleep(1)
+
+
+'''
+Alternatively you can use:
+
+led.pulse()
+pause()
+
+'''
