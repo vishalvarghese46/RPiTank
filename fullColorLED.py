@@ -1,4 +1,4 @@
-from gpiozero import RGBLED
+from gpiozero import RGBLED     #RGBLED comes with the kit
 from time import sleep
 
 led = RGBLED(red=9, green=10, blue=11)
@@ -21,3 +21,6 @@ sleep(1)
 # slowly increase intensity of blue
 for n in range(100):
     led.blue = n/100
+
+
+#Go through the documentation
