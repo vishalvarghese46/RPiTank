@@ -1,7 +1,7 @@
 from gpiozero import LED
 from signal import pause
 
-blue = LED(17)
+blue = LED(11)
 
 blue.blink()
 
