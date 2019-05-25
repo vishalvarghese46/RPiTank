@@ -9,9 +9,9 @@ Motor1A = 27
 Motor1B = 24
 Motor1Enable = 5
 
-Motor2A = 18
-Motor2B = 13
-Motor2Enable = 25
+Motor2A = 16
+Motor2B = 23
+Motor2Enable = 12
 
 
 '''Below is the GPIO setup'''
