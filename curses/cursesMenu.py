@@ -73,7 +73,7 @@ def main(stdscr):
             if current_row == len(menu) - 1:
                 exitRow = 0
                 exit_menu(stdscr, exitRow)
-                while True:
+                while True: #Adding another infinite while loop for exit menu
                     key1 = stdscr.getch()
 
                     if key1 == curses.KEY_UP and exitRow > 0:
