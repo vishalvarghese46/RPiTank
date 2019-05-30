@@ -31,3 +31,4 @@ def main(window):
         # KEY RELEASED
             robot.stop()
 curses.wrapper(main)
+

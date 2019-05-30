@@ -22,9 +22,11 @@ def print_menu(stdscr, selected_row_idx):
 def exit_menu(stdscr, selected_row_idx):
     stdscr.clear()
     h, w = stdscr.getmaxyx()
+    exitQ = "Are you sure you want to quit?"
+    stdscr.addstr(h//3, w//2 - len(exitQ)//2, exitQ)
     for index, row in enumerate(exit):
-        x = w//2 - len(row)//2
-        y = h//2 - len(exit)//2 + index
+        x = w//2 - len(exit)//2 + (8 * index)
+        y = h//2
         if index == selected_row_idx:
             stdscr.attron(curses.color_pair(1))
             stdscr.addstr(y, x, row)
@@ -76,14 +78,14 @@ def main(stdscr):
                 while True: #Adding another infinite while loop for exit menu
                     key1 = stdscr.getch()
 
-                    if key1 == curses.KEY_UP and exitRow > 0:
-                        exitRow -=1
-                    elif key1 == curses.KEY_UP and exitRow == 0:
+                    if key1 == curses.KEY_RIGHT and exitRow > 0:
+                        exitRow -= 1
+                    elif key1 == curses.KEY_RIGHT and exitRow == 0:
                         exitRow = len(exit)-1
-                    elif key1 ==curses.KEY_DOWN and exitRow < len(exit)-1:
-                        exitRow +=1
-                    elif key1 == curses.KEY_DOWN and exitRow == len(exit) - 1:
-                        exitRow =0
+                    elif key1 ==curses.KEY_LEFT and exitRow < len(exit)-1:
+                        exitRow += 1
+                    elif key1 == curses.KEY_LEFT and exitRow == len(exit) - 1:
+                        exitRow = 0
                     elif key == curses.KEY_ENTER or key in [10, 13] and exitRow == 0:
                         sys.exit()
                     elif key == curses.KEY_ENTER or key in [10, 13] and exitRow == 1:
