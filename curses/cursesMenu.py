@@ -88,7 +88,8 @@ def main(stdscr):
                         exitRow = 0
                     elif key == curses.KEY_ENTER or key in [10, 13] and exitRow == 0:
                         sys.exit()
-                    elif key == curses.KEY_ENTER or key in [10, 13] and exitRow == 1:
+                    elif key == curses.KEY_ENT
+                        ER or key in [10, 13] and exitRow == 1:
                         break
                     exit_menu(stdscr, exitRow)
         print_menu(stdscr, current_row)

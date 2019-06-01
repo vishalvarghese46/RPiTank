@@ -1,34 +1,23 @@
-import gpiozero
+from gpiozero import Robot
 import curses
-from time import sleep
-robot = gpiozero.Robot(left=(13, 18), right=(24, 27))
+import sys
+robot = Robot(left=(27,24), right=(16,23))
 
-actions = {
-        curses.KEY_UP: robot.forward,
-        curses.KEY_DOWN: robot.backward,
-        curses.KEY_LEFT: robot.left,
-        curses.KEY_RIGHT: robot.right,
-}
-
-def main(window):
-    next_key=None
+def main(stdscr):
     while True:
-        curses.halfdelay(1)
-        if next_key is None:
-            key = window.getch()
-        else:
-            key = next_key
-        next_key = None
-        if key != -1:
-            # KEY PRESSED
-            curses.halfdelay(3)
-            action = actions.get(key)
-            if action is not None:
-                action()
-            next_key = key
-            while next_key == key:
-                next_key = window.getch()
-        # KEY RELEASED
-            robot.stop()
+        key = stdscr.getch()
+        if key == curses.KEY_UP:
+            robot.forward()
+        elif key == curses.KEY_DOWN:
+            robot.backward()
+        elif key == curses.KEY_RIGHT:
+            robot.right()
+        elif key == curses.KEY_LEFT:
+            robot.left()
+        elif key == curses.KEY_ENTER or key in [10, 13]:
+            sys.exit()
 curses.wrapper(main)
+
+
+
 
