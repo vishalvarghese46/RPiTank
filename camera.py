@@ -19,19 +19,30 @@ class SplitFrames(object):
         self.stream = io.BytesIO()
         self.count = 0
 
-    def write(self, buf):
-        if buf.startswith(b'\xff\xd8'):
-            # Start of new frame; send the old one's length
-            # then the data
-            size = self.stream.tell()
-            if size > 0:
-                self.connection.write(struct.pack('<L', size))
-                self.connection.flush()
-                self.stream.seek(0)
-                self.connection.write(self.stream.read(size))
-                self.count += 1
-                self.stream.seek(0)
-        self.stream.write(buf)
-
-
-
+    try:
+        with picamera.PiCamera() as camera:
+            camera.resolution = (640, 480)
+            camera.framerate = 30
+            time.sleep(2)
+            start = time.time()
+            count = 0
+            stream = io.BytesIO()
+            # Use the video-port for captures...
+            for foo in camera.capture_continuous(stream, 'jpeg',
+                                                 use_video_port=True):
+                connection.write(struct.pack('<L', stream.tell()))
+                connection.flush()
+                stream.seek(0)
+                connection.write(stream.read())
+                count += 1
+                if time.time() - start > 30:
+                    break
+                stream.seek(0)
+                stream.truncate()
+        connection.write(struct.pack('<L', 0))
+    finally:
+        connection.close()
+        client_socket.close()
+        finish = time.time()
+    print('Sent %d images in %d seconds at %.2ffps' % (
+        count, finish - start, count / (finish - start)))c
