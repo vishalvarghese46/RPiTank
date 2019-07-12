@@ -1,36 +1,28 @@
-import io
 import socket
-import struct
-import time
-import picamera
+import subprocess
 
-client_socket = socket.socket()
-client_socket.connect(('192.168.1.230', 22))
-connection = client_socket.makefile('wb')
+# Start a socket listening for connections on 0.0.0.0:8000 (0.0.0.0 means
+# all interfaces)
+server_socket = socket.socket()
+server_socket.bind(('0.0.0.0', 8000))
+server_socket.listen(0)
+
+# Accept a single connection and make a file-like object out of it
+connection = server_socket.accept()[0].makefile('rb')
 try:
-    with picamera.PiCamera() as camera:
-        camera.resolution = (640, 480)
-        camera.framerate = 30
-        time.sleep(2)
-        start = time.time()
-        count = 0
-        stream = io.BytesIO()
-        # Use the video-port for captures...
-        for foo in camera.capture_continuous(stream, 'jpeg',
-                                             use_video_port=True):
-            connection.write(struct.pack('<L', stream.tell()))
-            connection.flush()
-            stream.seek(0)
-            connection.write(stream.read())
-            count += 1
-            if time.time() - start > 30:
-                break
-            stream.seek(0)
-            stream.truncate()
-    connection.write(struct.pack('<L', 0))
+    # Run a viewer with an appropriate command line. Uncomment the mplayer
+    # version if you would prefer to use mplayer instead of VLC
+    cmdline = ['vlc', '--demux', 'h264', '-']
+    #cmdline = ['mplayer', '-fps', '25', '-cache', '1024', '-']
+    player = subprocess.Popen(cmdline, stdin=subprocess.PIPE)
+    while True:
+        # Repeatedly read 1k of data from the connection and write it to
+        # the media player's stdin
+        data = connection.read(1024)
+        if not data:
+            break
+        player.stdin.write(data)
 finally:
     connection.close()
-    client_socket.close()
-    finish = time.time()
-print('Sent %d images in %d seconds at %.2ffps' % (
-    count, finish-start, count / (finish-start)))
+    server_socket.close()
+    player.terminate()
