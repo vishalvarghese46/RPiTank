@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#http://pi-address:8082/
+
 
 import sys
 import io
