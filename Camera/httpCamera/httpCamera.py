@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #http://pi-address:8082/
-
+#http://192.168.1.230:8082/
 
 import sys
 import io
