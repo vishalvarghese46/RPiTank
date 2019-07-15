@@ -3,6 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/curses/python-curses-tut" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/socket/SocChat" vcs="Git" />
   </component>
 </project>
