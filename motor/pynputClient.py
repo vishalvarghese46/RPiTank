@@ -21,7 +21,8 @@ while True:
     elif msg == '0':
         robot.stop()
     elif msg == '404':
+        print("Quiting, bye now")
         sys.exit()
     else:
-        print('WTF?!! >:(')
+        print("Connected to Server!")
 
