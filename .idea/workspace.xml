@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d5bfd9d-62d0-4435-87a9-e0fd677c72dc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Camera/AutoClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Camera/AutoClient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../AutoRCCar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenCV" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -283,6 +283,10 @@
       <workItem from="1564006759249" duration="926000" />
       <workItem from="1564405973238" duration="239000" />
       <workItem from="1564572581916" duration="3306000" />
+      <workItem from="1564613321506" duration="689000" />
+      <workItem from="1564870186162" duration="1069000" />
+      <workItem from="1564954396828" duration="48000" />
+      <workItem from="1565038218364" duration="88000" />
     </task>
     <servers />
   </component>
@@ -303,7 +307,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -312,6 +318,7 @@
   <component name="VcsManagerConfiguration">
     <ignored-roots>
       <path value="$PROJECT_DIR$/socket/SocChat" />
+      <path value="$PROJECT_DIR$/AutoRCCar" />
     </ignored-roots>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
