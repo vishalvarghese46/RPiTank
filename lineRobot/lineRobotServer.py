@@ -74,10 +74,10 @@ class videoStreaming(object):
         if centroidx >= 240:
             self.connection.send(bytes("2", 'utf-8'))
             print("2 - Right")
-        elif centroidx < 240 and cx > 110:
+        elif centroidx < 240 and cx > 100:
             self.connection.send(bytes("1", "utf-8"))
             print("1 - Forward")
-        elif centroidx <= 110:
+        elif centroidx <= 100:
             self.connection.send(bytes("3", "utf-8"))
             print("3 - Left")
         else:

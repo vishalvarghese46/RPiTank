@@ -27,7 +27,6 @@ def instruction():
         elif msg == '3':
             #robot.right()
             print("3 - Going right")
-            pass
         elif msg == '4':
             #robot.backward()
             pass
