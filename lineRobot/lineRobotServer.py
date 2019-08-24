@@ -34,30 +34,34 @@ class videoStreaming(object):
                     image = cv2.imdecode(np.frombuffer(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)
                     cv2.imshow('image', image)
 
-                    grey_img = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-                    blur = cv2.GaussianBlur(grey_img, (5,5), 0)
+                    crop_img = image[120:240, 0:320]
+
+                    grey_img = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
+                    blur = cv2.GaussianBlur(grey_img, (5, 5), 0)
                     ret, thresh = cv2.threshold(blur, 60, 255, cv2.THRESH_BINARY_INV)
 
-                    contours, hierarchy = cv2.findContours(thresh.copy(), 1, cv2.CHAIN_APPROX_NONE)
+                    mask = cv2.erode(thresh, None, iterations=2)
+                    mask = cv2.dilate(mask, None, iterations=2)
 
-                    if len(contours)>0:
+                    contours, hierarchy = cv2.findContours(mask.copy(), 1, cv2.CHAIN_APPROX_NONE)
+
+                    if len(contours) > 0:
                         c = max(contours, key=cv2.contourArea)
                         M = cv2.moments(c)
 
-                        cx = int(M['m10']/M['m00'])
-                        cy = int(M['m01']/M['m00'])
+                        cx = int(M['m10'] / M['m00'])
+                        cy = int(M['m01'] / M['m00'])
 
-                        cv2.line(image, (cx, 0), (cx, 720), (255, 0, 0), 1)
-                        cv2.line(image, (0, cy), (1280, cy), (255, 0, 0), 1)
+                        cv2.line(crop_img, (cx, 0), (cx, 720), (255, 0, 0), 1)
+                        cv2.line(crop_img, (0, cy), (1280, cy), (255, 0, 0), 1)
 
-                        cv2.drawContours(image, contours, -1, (0, 255, 0), 1)
+                        cv2.drawContours(crop_img, contours, -1, (0, 255, 0), 1)
                         self.robot(cx)
 
                     else:
                         print("Can't see shit dawg!")
 
-                    cv2.imshow('Frame', image)
-
+                    cv2.imshow('Frame', crop_img)
 
                     if cv2.waitKey(1) & 0xFF == ord('q'):
                         break
@@ -67,17 +71,18 @@ class videoStreaming(object):
 
     def robot(self, cx):
         centroidx = cx
-        if centroidx >= 120:
-            self.connection.send(bytes("1", 'utf-8'))
+        if centroidx >= 240:
+            self.connection.send(bytes("2", 'utf-8'))
+            print("2 - Right")
+        elif centroidx < 240 and cx > 110:
+            self.connection.send(bytes("1", "utf-8"))
             print("1 - Forward")
-        elif centroidx < 120 and cx > 50:
-            self.connection.send(bytes("2", "utf-8"))
-            print("2 - Left")
-        elif centroidx <= 50:
+        elif centroidx <= 110:
             self.connection.send(bytes("3", "utf-8"))
-            print("3 - right")
+            print("3 - Left")
         else:
             print("Trouble!")
+
 
 if __name__ == '__main__':
     # host, port
