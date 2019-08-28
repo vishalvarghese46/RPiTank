@@ -71,15 +71,15 @@ class videoStreaming(object):
 
     def robot(self, cx):
         centroidx = cx
-        if centroidx >= 240:
-            self.connection.send(bytes("2", 'utf-8'))
-            print("2 - Right")
-        elif centroidx < 240 and cx > 100:
+        if centroidx >= 220:
+            self.connection.send(bytes("3", 'utf-8'))
+            print("3 - Right")
+        elif centroidx < 220 and cx > 100:
             self.connection.send(bytes("1", "utf-8"))
             print("1 - Forward")
         elif centroidx <= 100:
-            self.connection.send(bytes("3", "utf-8"))
-            print("3 - Left")
+            self.connection.send(bytes("2", "utf-8"))
+            print("2 - Left")
         else:
             print("Trouble!")
 

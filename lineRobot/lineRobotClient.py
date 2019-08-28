@@ -19,14 +19,14 @@ def instruction():
         msg = client_socket.recv(1024)
         msg = msg.decode('utf-8')
         if msg == '1':
-            print("1 - Going Forward")
-            #robot.forward()
+            #print("1 - Going Forward")
+            robot.forward()
         elif msg == '2':
-            #robot.left()
-            print("2 - Going Left")
+            robot.left()
+            #print("2 - Going Left")
         elif msg == '3':
-            #robot.right()
-            print("3 - Going right")
+            robot.right()
+            #print("3 - Going right")
         elif msg == '4':
             #robot.backward()
             pass

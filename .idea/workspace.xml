@@ -37,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Data Structures" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Basics" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,7 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.AutoClient">
+  <component name="RunManager" selected="Python.lineRobotClient">
     <configuration name="AutoClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gpiozero" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -179,7 +179,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pynputServer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="pynputClient" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="gpiozero" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -192,7 +192,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/motor/pynputServer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/motor/pynputClient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,11 +203,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.AutoClient" />
         <item itemvalue="Python.lineRobotClient" />
         <item itemvalue="Python.motor" />
+        <item itemvalue="Python.pynputClient" />
+        <item itemvalue="Python.AutoClient" />
         <item itemvalue="Python.contourClient" />
-        <item itemvalue="Python.pynputServer" />
       </list>
     </recent_temporary>
   </component>
@@ -301,6 +301,10 @@
       <workItem from="1566502496104" duration="6480000" />
       <workItem from="1566665516939" duration="6025000" />
       <workItem from="1566680104753" duration="188000" />
+      <workItem from="1566684418717" duration="281000" />
+      <workItem from="1566929683314" duration="38000" />
+      <workItem from="1566929758266" duration="1515000" />
+      <workItem from="1566990615358" duration="7670000" />
     </task>
     <servers />
   </component>
@@ -337,15 +341,15 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/gpiozero$vlcCamera.coverage" NAME="vlcCamera Coverage Results" MODIFIED="1563046998802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
-    <SUITE FILE_PATH="coverage/gpiozero$lineRobotClient.coverage" NAME="lineRobotClient Coverage Results" MODIFIED="1566677726430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lineRobot" />
+    <SUITE FILE_PATH="coverage/gpiozero$lineRobotClient.coverage" NAME="lineRobotClient Coverage Results" MODIFIED="1567000830252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/lineRobot" />
     <SUITE FILE_PATH="coverage/gpiozero$LEDBoard.coverage" NAME="LEDBoard Coverage Results" MODIFIED="1557967152091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gpiozero$openCvVideo.coverage" NAME="openCvVideo Coverage Results" MODIFIED="1563048370027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
     <SUITE FILE_PATH="coverage/gpiozero$video.coverage" NAME="video Coverage Results" MODIFIED="1562888079787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basics" />
     <SUITE FILE_PATH="coverage/gpiozero$client.coverage" NAME="client Coverage Results" MODIFIED="1563045939012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
     <SUITE FILE_PATH="coverage/gpiozero$LEDBargraph.coverage" NAME="LEDBargraph Coverage Results" MODIFIED="1557967352614" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gpiozero$server__1_.coverage" NAME="server (1) Coverage Results" MODIFIED="1563050010991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
-    <SUITE FILE_PATH="coverage/gpiozero$pynputClient.coverage" NAME="pynputClient Coverage Results" MODIFIED="1566333233988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/motor" />
-    <SUITE FILE_PATH="coverage/gpiozero$AutoClient.coverage" NAME="AutoClient Coverage Results" MODIFIED="1566677970954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
+    <SUITE FILE_PATH="coverage/gpiozero$pynputClient.coverage" NAME="pynputClient Coverage Results" MODIFIED="1566997231892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/motor" />
+    <SUITE FILE_PATH="coverage/gpiozero$AutoClient.coverage" NAME="AutoClient Coverage Results" MODIFIED="1566997210104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera" />
     <SUITE FILE_PATH="coverage/gpiozero$httpCamera__1_.coverage" NAME="httpCamera (1) Coverage Results" MODIFIED="1563743112493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/camera/httpCamera" />
     <SUITE FILE_PATH="coverage/gpiozero$server.coverage" NAME="server Coverage Results" MODIFIED="1562441240164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Camera" />
     <SUITE FILE_PATH="coverage/gpiozero$robot.coverage" NAME="robot Coverage Results" MODIFIED="1562440732564" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -366,6 +370,6 @@
     <SUITE FILE_PATH="coverage/gpiozero$fullColorLED.coverage" NAME="fullColorLED Coverage Results" MODIFIED="1558304657615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gpiozero$camera.coverage" NAME="camera Coverage Results" MODIFIED="1562882929532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/basics" />
     <SUITE FILE_PATH="coverage/gpiozero$contourClient.coverage" NAME="contourClient Coverage Results" MODIFIED="1566342483622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bluedot" />
-    <SUITE FILE_PATH="coverage/gpiozero$motor.coverage" NAME="motor Coverage Results" MODIFIED="1566677710621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/motor" />
+    <SUITE FILE_PATH="coverage/gpiozero$motor.coverage" NAME="motor Coverage Results" MODIFIED="1566998185381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/motor" />
   </component>
 </project>
