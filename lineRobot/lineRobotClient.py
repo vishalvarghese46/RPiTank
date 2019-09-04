@@ -15,12 +15,13 @@ client_socket.connect(('192.168.1.67', 8000))
 connection = client_socket.makefile('wb')
 
 def instruction():
+    time.sleep(7)
     while True:
         msg = client_socket.recv(1024)
         msg = msg.decode('utf-8')
         if msg == '1':
             #print("1 - Going Forward")
-            robot.forward()
+            robot.forward(speed=0.5)
         elif msg == '2':
             robot.left()
             #print("2 - Going Left")
