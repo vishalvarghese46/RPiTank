@@ -76,7 +76,7 @@ Explain what these tests test and why
 Give an example
 ```
 
-## LineFollowing in ACTION!:smirk_cat: 
+## LineFollowing in ACTION!🤖:joystick:
 
 Add additional notes about how to deploy this on a live system
 
