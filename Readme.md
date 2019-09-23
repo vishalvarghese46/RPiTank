@@ -10,7 +10,7 @@ The project is divide into 4 sections:
 
 ## LineFollowing in ACTION!🤖:joystick:
 
-Add additional notes about how to deploy this on a live system
+<img src="readmeImages/tank.gif" height="500" width="375">
 
 ## Getting Started
 
