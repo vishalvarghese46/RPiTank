@@ -8,6 +8,9 @@ The project is divide into 4 sections:
 > 3. __RPi Tank video streaming via _Network Sockets_ and _http_.__
 > 4. __Line following RPi tank using **OpenCV**.__
 
+## LineFollowing in ACTION!🤖:joystick:
+
+Add additional notes about how to deploy this on a live system
 
 ## Getting Started
 
@@ -66,10 +69,6 @@ _Follow the script execution cycle below:_
 ```
 1. 
 ```
-
-## LineFollowing in ACTION!🤖:joystick:
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
