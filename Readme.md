@@ -1,6 +1,13 @@
-# Project Title
+# RPi Tank
 
-One Paragraph of project description goes here
+Coding of the control system for a model tank with **Raspberry Pi**. 
+The project is divide into 4 sections:
+
+> 1. Keyboard Controlled RPi tank with _Remote Desktop Connection_ into the Raspberry Pi.
+> 2. Keyboard Controlled RPi tank with _Network Sockets_.
+> 3. RPi Tank video streaming via _Network Sockets_ and _http_.
+> 4. Line following RPi tank using **OpenCV**.
+
 
 ## Getting Started
 
@@ -21,7 +28,21 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-Give the example
+1. GPIOZERO Library - A simple interface to GPIO devices with Raspberry Pi.
+
+  pip install gpiozero
+  
+2. Pynput Library - Keyboard event handling Library for Tank's controls.
+  
+  pip install pynput
+  
+3. Pi Camera - This package provides a pure Python interface to the Raspberry Pi camera module for Python 2.7 (or above) or Python 3.2 (or above).  
+
+  pip install picamera
+  
+4. OpenCV - Unofficial pre-built OpenCV packages for Python.
+
+  pip install opencv-python
 ```
 
 And repeat
@@ -42,7 +63,6 @@ Explain what these tests test and why
 
 ```
 Give an example
-```
 
 ### And coding style tests
 
