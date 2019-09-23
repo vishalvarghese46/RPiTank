@@ -26,9 +26,7 @@ What things you'll need in terms of Software and Hardware and how to install the
 
 ### Libraries
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+The list of libraries that are required are stated below:
 
 ```
 1. GPIOZERO Library - A simple interface to GPIO devices with Raspberry Pi.
@@ -58,22 +56,15 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the RPi Tank:
 
-Explain how to run the automated tests for this system
+***The final setup of the RPi tank looks something like*** :arrow_double_down:
 
-### Break down into end to end tests
+![](readmeImages/finalTank.jpg)
 
-Explain what these tests test and why
+### :arrow_forward: Executing Programmes associated.
 
+_Follow the script execution cycle below:_
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+1. 
 ```
 
 ## LineFollowing in ACTION!🤖:joystick:
