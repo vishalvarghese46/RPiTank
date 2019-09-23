@@ -66,10 +66,30 @@ End with an example of getting some data out of the system or using it for a lit
 ### :arrow_forward: Executing Programmes associated.
 
 _Follow the script execution cycle below:_
-```
-1. 
-```
 
+**1. Sprint 1 - Raspberry Pi and Tank/**  
+  - &emsp; &emsp; `cursesRobot.py`: _Remote Desktop Connect_ to the Pi and run the script on the Pi terminal as<br /> 
+   &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp;  curses module only runs on terminal window. This establishes <br /> 
+   &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp;keyboard RPi Tank controls.
+ - &emsp; &emsp;  `stream_server_test.py`: video streaming from Pi to computer  
+  &emsp; &emsp;  `ultrasonic_server_test.py`: sensor data streaming from Pi to computer  
+  &emsp; &emsp;  **model_train_test/**  
+      &emsp; &emsp;  &emsp; &emsp; `data_test.npz`: sample data  
+      &emsp; &emsp;  &emsp; &emsp; `train_predict_test.ipynb`: a jupyter notebook that goes through neural network model in OpenCV3  
+  
+**2. Sprint 2 - RPi controlled tank via Sockets/**    
+  - &emsp; &emsp; `pynputRobotClient.py`: Socket client program that runs on the RPi.<br /> 
+  - &emsp; &emsp; `pynputRobotClient.py`: Socket server program that runs on the Local Machine ready for keyboard inputs.<br /> 
+     
+**arduino/**  
+  &emsp; &emsp;  `rc_keyboard_control.ino`: control RC car controller  
+  
+**computer/**    
+  &emsp; &emsp;  **cascade_xml/**  
+      &emsp; &emsp;  &emsp; &emsp;  trained cascade classifiers  
+  &emsp; &emsp;  **chess_board/**   
+      &emsp; &emsp;  &emsp; &emsp;  images for calibration, captured by pi camera  
+      
 ## Built With
 
 * [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) - OS for Raspberry Pi
