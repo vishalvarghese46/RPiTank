@@ -66,6 +66,7 @@ Explain what these tests test and why
 
 ```
 Give an example
+```
 
 ### And coding style tests
 
@@ -108,4 +109,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
