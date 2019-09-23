@@ -15,13 +15,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you'll need in terms of Software and Hardware and how to install them:
 
-```
-Give examples
-```
+### Harware required
 
-### Installing
+- ***1.Raspberry Pi (Model 3 onwards recommended)***	
+- ***2. MotoZero PCB***
+- ***3. Power Supply (5V Power Bank)***
+- ***4. Pi Camera Module V2***
+
+### Libraries
 
 A step by step series of examples that tell you how to get a development env running
 
