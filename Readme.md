@@ -3,10 +3,10 @@
 Coding of the control system for a model tank with **Raspberry Pi**. 
 The project is divide into 4 sections:
 
-> 1. Keyboard Controlled RPi tank with _Remote Desktop Connection_ into the Raspberry Pi.
-> 2. Keyboard Controlled RPi tank with _Network Sockets_.
-> 3. RPi Tank video streaming via _Network Sockets_ and _http_.
-> 4. Line following RPi tank using **OpenCV**.
+> 1. __Keyboard Controlled RPi tank with _Remote Desktop Connection_ into the Raspberry Pi.__
+> 2. __Keyboard Controlled RPi tank with _Network Sockets_.__
+> 3. __RPi Tank video streaming via _Network Sockets_ and _http_.__
+> 4. __Line following RPi tank using **OpenCV**.__
 
 
 ## Getting Started
@@ -19,7 +19,7 @@ What things you'll need in terms of Software and Hardware and how to install the
 
 ### Harware required
 
-- ***1.Raspberry Pi (Model 3 onwards recommended)***	
+- ***1. Raspberry Pi (Model 3 onwards recommended)***	
 - ***2. MotoZero PCB***
 - ***3. Power Supply (5V Power Bank)***
 - ***4. Pi Camera Module V2***
