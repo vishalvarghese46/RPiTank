@@ -71,24 +71,21 @@ _Follow the script execution cycle below:_
   - &emsp; &emsp; `cursesRobot.py`: _Remote Desktop Connect_ to the Pi and run the script on the Pi terminal as<br /> 
    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp;  curses module only runs on terminal window. This establishes <br /> 
    &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp;keyboard RPi Tank controls.
- - &emsp; &emsp;  `stream_server_test.py`: video streaming from Pi to computer  
-  &emsp; &emsp;  `ultrasonic_server_test.py`: sensor data streaming from Pi to computer  
-  &emsp; &emsp;  **model_train_test/**  
-      &emsp; &emsp;  &emsp; &emsp; `data_test.npz`: sample data  
-      &emsp; &emsp;  &emsp; &emsp; `train_predict_test.ipynb`: a jupyter notebook that goes through neural network model in OpenCV3  
   
 **2. Sprint 2 - RPi controlled tank via Sockets/**    
   - &emsp; &emsp; `pynputRobotClient.py`: Socket client program that runs on the RPi.<br /> 
   - &emsp; &emsp; `pynputRobotClient.py`: Socket server program that runs on the Local Machine ready for keyboard inputs.<br /> 
      
-**arduino/**  
-  &emsp; &emsp;  `rc_keyboard_control.ino`: control RC car controller  
+**3. Sprint 3 - PiCamera and OpenCV/**  
+  - &emsp; &emsp;  `robotCameraClient.py`: Socket client program that runs on the RPi for live video streaming.<br /> 
+  - &emsp; &emsp; `robotCameraServer.py`: Socket server program that runs on the Local Machine Playing streamed video.<br /> 
+  - &emsp; &emsp;  **httpCamera/**  
+      &emsp; &emsp;  &emsp; &emsp; `httpCamer.py`: Run the script to create the http server on the Pi. Now on the Local Machine<br /> 
+      &emsp;&emsp; &emsp;&emsp; &emsp; &emsp; &emsp; &emsp;  &emsp; &emsp;search for Pi's IP and the video stream will be available on the webpage. <br /> 
   
-**computer/**    
-  &emsp; &emsp;  **cascade_xml/**  
-      &emsp; &emsp;  &emsp; &emsp;  trained cascade classifiers  
-  &emsp; &emsp;  **chess_board/**   
-      &emsp; &emsp;  &emsp; &emsp;  images for calibration, captured by pi camera  
+**4. Sprint 4 - Line following RPi Tank/**   
+  - &emsp; &emsp; `lineRobotClient.py`: Socket client program for line Following RPi tank.<br /> 
+  - &emsp; &emsp; `lineRobotServer.py`: Socket server program for line Following RPi tank.<br /> 
       
 ## Built With
 
